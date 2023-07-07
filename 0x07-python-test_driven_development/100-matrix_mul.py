@@ -12,11 +12,9 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list")
     if type(m_b) != list:
         raise TypeError("m_b must be a list")
-
     # variables to verify if both m_a and m_b can be multiplied
     num_colum1 = 0
     num_row2 = 0
-
     # Check requirements for matrix m_a
     if m_a == []:
         raise ValueError("m_a can't be empty")
@@ -32,7 +30,6 @@ def matrix_mul(m_a, m_b):
         for column1 in row1:
             if type(column1) != int and type(column1) != float:
                 raise TypeError("m_a should contain only integers or floats")
-
     # Check requirements for matrix m_b
     if m_b == []:
         raise ValueError("m_b can't be empty")
@@ -48,13 +45,10 @@ def matrix_mul(m_a, m_b):
         for column2 in row2:
             if type(column2) != int and type(column2) != float:
                 raise TypeError("m_b should contain only integers or floats")
-
     # Check if the multiplication is posible
     if num_colum1 != num_row2:
         raise ValueError("m_a and m_b can't be multiplied")
-
     mul_matrix = []
-
     for row_1 in m_a:
         l = 0
         l_row = []
@@ -67,5 +61,4 @@ def matrix_mul(m_a, m_b):
             l_row.append(result)
             l += 1
         mul_matrix.append(l_row)
-
     return mul_matrix
