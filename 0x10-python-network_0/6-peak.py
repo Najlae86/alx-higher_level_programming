@@ -7,17 +7,17 @@ def find_peak(list_of_integers):
     if list_of_integers == []:
         return None
     length = len(list_of_integers)
-    n = int(length / 2)
+    i = int(length / 2)
     list_i = list_of_integers
 
-    if n - 1 < 0 and n + 1 >= length:
-        return list_i[n]
-    elif n - 1 < 0:
-        return list_i[n] if list_i[n] > list_i[n + 1] else list_i[n +1]
-    elif n + 1 >= length:
-        return list_i[n] if list_i[n] > list_i[n - 1] else list_i [n - 1]
-    if list_i[n - 1] < list_i[n] > list_i[n + 1]:
-        return list_i[n]
-    if list_i[n + 1] > list_i[n - 1]:
-        return find_peak(list_i[n:])
-    return find_peak(list_i[:n])
+    if i - 1 < 0 and i + 1 >= length:
+        return list_i[i]
+    elif i - 1 < 0:
+        return list_i[i] if list_i[i] > list_i[i + 1] else list_i[i + 1]
+    elif i + 1 >= length:
+        return list_i[i] if list_i[i] > list_i[i - 1] else list_i [i - 1]
+    if list_i[i - 1] < list_i[i] > list_i[i + 1]:
+        return list_i[i]
+    if list_i[i + 1] > list_i[i - 1]:
+        return find_peak(list_i[i:])
+    return find_peak(list_i[:i])
