@@ -2,12 +2,12 @@
 """ Sends a request to a given URL and displays the response body.
 Usage: ./3-error_code.py <URL>
 """
+import sys
+import urllib.request
+import urllib.error
 
 
 if __name__ = '__main__':
-    import sys
-    import urllib.request
-    import urllib.error
     url = sys.argv[1]
 
     request = urllib.request.Request(url)
