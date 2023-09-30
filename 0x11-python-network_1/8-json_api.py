@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" Sends a POST request to http://0.0.0.0:5000/search_user with a given letter.
+""" Sends a POST request to http://0.0.0.0:5000/search_user
+with a given letter.
 Usage: ./8-json_api.py <URL>
 """
 import sys
