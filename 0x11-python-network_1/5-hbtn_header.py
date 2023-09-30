@@ -4,7 +4,7 @@ Usage: ./5-hbtn_header.py <URL>
 """
 
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     import sys
     import requests
     url = sys.argv[1]
